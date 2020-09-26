@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>Eifel Retransmission Timer</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  
+</head>
+<body>
+  <nav class="blue lighten-1" role="navigation">
+    <div class="nav-wrapper container"><center><font size = "+1">Eifel Retransmission Timer</font></center></a>
+
+      <ul id="nav-mobile" class="side-nav">
+        <li><a href="#">Navbar Link</a></li>
+      </ul>
+      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+    </div>
+  </nav>
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+      <br><br>
+      <h4 class="header center orange-text">Implementation of Eifel Retransmission Timer in CoAP</h4>
+      <div class="row center">
+        <h6 class="header col s12 dark">Students : Vishal Rathod, Sanjana Krishnam, Ayush Kumar, Gauri Baraskar .</h6>
+        <h6 class="header col s12 dark">Mentor : Mohit P. Tahiliani</h6>
+      </div>
+      <div class="row center">
+        <a href="https://github.com/vishal623/CoAP-Eifel" id="download-button" class="btn-large waves-effect waves-light orange">Github</a>
+          <a href="https://drive.google.com/file/d/1tG6aDQsgvXiHrP_Gavo5DvYg05igPTi8/view?usp=sharing" id="download-button" class="btn-large waves-effect waves-light orange">Changefiles</a>
+          <a href="https://github.com/vishal623/CoAP-Eifel/tree/master/Results" id="download-button" class="btn-large waves-effect waves-light orange">Results</a>
+      </div>
+      <br><br>
+
+    </div>
+  </div>
+
+
+  <div class="container">
+    <div class="section">
+
+      <!--   Icon Section   -->
+      <div class="row">
+        <div class="col s12 m12">
+            
+            <h4>Introduction</h4><br/>
+
+            <p class="light">
+            Eifel Retransmission Timer suggests an alternative way of RTO estimation in TCP. It uses a RTT based RTO prediction which overcomes the shortcomings of the default TCP RTO estimation. TCP Eifel is made up of three parts out of which we focus on the Eifel Retransmission Timer.<br/>
+            In this project we have implemented this retransmission timer for Constrained Application Protocol(CoAP). CoAP uses a fixed RTO value with BEB in case of retransmissions, after implementing Eifel Retransmission Timer in CoAP, the RTO values will be set based on network state determined from the RTT values. In our
+            work we have demonstrated that this RTO estimation leads to better network performance across various metrics such as throughput and latency.
+            </p>
+          <div class="center" align-content="center">
+          <img src="eifel-flow.jpg" height="300" width="540">
+          </div>
+        </div>
+        </div>
+        
+        <div class="row">
+        <div class="col s12 m10">
+            
+            <h5>Steps to Reproduce the results</h5><br/>
+
+            <p class="light">
+            <ol>
+                <li class="light">Clone the Contiki OS repository : <a href="https://github.com/contiki-os/contiki">Link</a></li>
+                <li class="light">Download the Changefiles using the link given in this page</li>
+                <li class="light" >Extract and paste the changefiles in apps/er-coap directory within Contiki OS repository.</li>
+                <li class="light">Eifel can now be built and run on Cooja simulator or FIT/IoT Lab.</li>
+            </ol>
+            </p>
+        </div>
+        </div>
+      
+      <div class="row">
+        <div class="col s12 m10">
+            
+            <h5>Future Work</h5><br/>
+
+            <p class="light">
+              <ol>
+                <li class="light">Evaluate our approach for a broader range of traffic scenarios, such as burst traffic, mixed traffic, etc. </li>
+                <li class="light">Conduct a comparative analysis between Eifel Retransmission Timer and other RTT based congestion control mechanisms for CoAP with different offered loads.</li>
+                <li class="light">Assess the fairness of our algorithm in the presence of other RTT based congestion control mechanisms.</li>
+                <li class="light">Check the efficiency of our implementation in IoTivity platform.</li>
+                
+              </ol>
+                 
+            </p>
+        </div>
+        </div>
+
+       
+    </div>
+    <br><br>
+
+    <div class="section">
+
+    </div>
+  </div>
+
+  <footer class="page-footer blue">
+    <div class="container">
+      <div class="row">
+        <div class="col l4 s12">
+          <h5 class="white-text">Reference Material</h5>
+          <ul>
+            <li><a class="orange-text text-lighten-3" href="http://ccr.sigcomm.org/archive/2000/july00/LudwigFinal.pdf">Eifel Retransmission Timer Paper</a></li>
+            <li><a class="orange-text text-lighten-3" href="https://github.com/contiki-os/contiki">Contiki OS Repository</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+     <a class="orange-text text-lighten-3" href="http://wing.nitk.ac.in">Wireless Information Networking Group (WiNG),</a> NITK Surathkal, India.
+      </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+
+  </body>
+</html>
