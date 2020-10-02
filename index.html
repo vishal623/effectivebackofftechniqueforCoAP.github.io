@@ -3,7 +3,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
-  <title>An Efficient Backoff Technique for CoAP</title>
+  <title>Geometric Sequence Technique for Effective RTO Estimation in CoAP</title>
 
   <!-- CSS  -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -13,7 +13,7 @@
 </head>
 <body>
   <nav class="blue lighten-1" role="navigation">
-    <div class="nav-wrapper container"><center><font size = "+1">An Efficient Backoff Technique for CoAP</font></center></a>
+    <div class="nav-wrapper container"><center><font size = "+1">Geometric Sequence Technique for Effective RTO Estimation in CoAP</font></center></a>
 
       <ul id="nav-mobile" class="side-nav">
         <li><a href="#">Navbar Link</a></li>
@@ -24,7 +24,7 @@
   <div class="section no-pad-bot" id="index-banner">
     <div class="container">
       <br><br>
-      <h4 class="header center orange-text">Implementation of an Efficient Backoff Technique for CoAP</h4>
+      <h4 class="header center orange-text">Implementation of a Geometric Sequence Technique for Effective RTO Estimation in CoAP</h4>
       <div class="row center">
         <h6 class="header col s12 dark">Authors : Vishal Rathod and Mohit P. Tahiliani</h6>
         <!--<h6 class="header col s12 dark">Mentor : Mohit P. Tahiliani</h6>-->
@@ -50,9 +50,10 @@
             <h4>Introduction</h4><br/>
 
             <p class="light">
-            Eifel Retransmission Timer suggests an alternative way of RTO estimation in TCP. It uses a RTT based RTO prediction which overcomes the shortcomings of the default TCP RTO estimation. TCP Eifel is made up of three parts out of which we focus on the Eifel Retransmission Timer.<br/>
-            In this project we have implemented this retransmission timer for Constrained Application Protocol(CoAP). CoAP uses a fixed RTO value with BEB in case of retransmissions, after implementing Eifel Retransmission Timer in CoAP, the RTO values will be set based on network state determined from the RTT values. In our
-            work we have demonstrated that this RTO estimation leads to better network performance across various metrics such as throughput and latency.
+            A Geometric Sequence Technique (GST) is an effective RTO estimation in Constrained Application Protocol (CoAP). GST retains the previous RTO value after having received the ACK for the retransmitted packet and eventually returns to the default value by decreasing the RTO depending on the number of consecutive successful transmissions. <br/>
+            CoAP uses a fixed RTO value with BEB in case of retransmissions. Two new techniques, namely Fullbackoff1 variant and Fullbackoff2 variant are proposed to improve the RTO estimation in CoAP. In this work, we have implemented an effective backoff mechanism for CoAP which leverages geometric sequences. <br/>
+            GST is a simple enhancement to the Fullbackoff2 variant. Unlike the latter which decreases RTO in a binary exponential manner (i.e., reduces RTO by half) when packets are cleared without retransmissions. <br/>
+            In our work, GST minimizes the Flow Completion Times (FCT), reduces the number retransmissions and improves the network throughput.                 
             </p>
           <div class="center" align-content="center" float="left" width="25.00%" padding="5px">
           <img src="Vishal_Diagram_coap.jpg" height="300" width="250">
